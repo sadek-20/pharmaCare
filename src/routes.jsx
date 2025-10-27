@@ -1,9 +1,9 @@
-import Dashboard from "./pages/Dashboard"
-import MedicineManagement from "./pages/MedicineManagement"
-import InvoiceCreate from "./pages/InvoiceCreate"
-import CustomerManagement from "./pages/CustomerManagement"
-import SupplierManagement from "./pages/SupplierManagement"
-import Transactions from "./pages/Transactions"
+import CustomerManagement from "./pages/CustomerManagement";
+import Dashboard from "./pages/Dashboard";
+import InvoiceManagement from "./pages/InvoiceManagement";
+import MedicineManagement from "./pages/MedicineManagement";
+import SupplierManagement from "./pages/SupplierManagement";
+import Transactions from "./pages/Transactions";
 
 // Route configuration for the pharmacy management system
 export const routes = [
@@ -21,8 +21,8 @@ export const routes = [
   },
   {
     path: "invoice",
-    name: "Create Invoice",
-    component: InvoiceCreate,
+    name: "Invoice Management",
+    component: InvoiceManagement,
     icon: "FileText",
   },
   {
@@ -43,13 +43,13 @@ export const routes = [
     component: Transactions,
     icon: "Receipt",
   },
-]
+];
 
 // Get route component by path
 export const getRouteComponent = (path) => {
-  const route = routes.find((r) => r.path === path)
-  return route ? route.component : routes[0].component
-}
+  const route = routes.find((r) => r.path === path);
+  return route ? route.component : routes[0].component;
+};
 
 // Get default route
-export const getDefaultRoute = () => routes[0].path
+export const getDefaultRoute = () => routes[0].path;
